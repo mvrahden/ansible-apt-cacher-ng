@@ -15,10 +15,10 @@ galaxy_info:
     versions:
       - all
 
-  categories:
+  galaxy_tags:
   - packaging
   - system
   - apt
-  - apt_cacher
+  - aptcacher
 
 dependencies: []
