@@ -4,8 +4,7 @@
     name: "apt-cacher-ng"
     state: "present"
   when: >
-        enable_apt_caching is defined and
-        enable_apt_caching
+        enable_apt_caching | bool
 
 - name: debian | configuring apt-cacher-ng (Server)
   template:
@@ -17,5 +16,4 @@
   notify: "restart apt-cacher-ng"
   with_items: '{{ apt_cacher_configs }}'
   when: >
-        enable_apt_caching is defined and
-        enable_apt_caching
+        enable_apt_caching | bool

@@ -8,8 +8,7 @@
     mode: "u=rw,g=r,o=r"
   register: "apt_caching_configured"
   when: >
-        enable_apt_caching is defined and
-        enable_apt_caching
+        enable_apt_caching | bool
 
 - name: debian_client | removing apt caching (Client)
   file:
@@ -21,11 +20,9 @@
     - '/etc/apt/apt.conf'
     - '/etc/apt/apt.conf.d/02aptcacherng'
   when: >
-        (enable_apt_caching is defined and
-          not enable_apt_caching) or
-          enable_apt_caching is not defined
+        not (enable_apt_caching | bool)
 
 - name: config_apt_cacher | refreshing apt from cache server (Client)
   apt:
     update_cache: yes
-  when: apt_caching_configured.changed
+  when: _apt_caching_configured['changed']

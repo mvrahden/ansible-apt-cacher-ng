@@ -1,4 +1,6 @@
 ---
 # tasks file for ansible-apt-cacher-ng
 - include: debian.yml
-  when: ansible_os_family == "Debian"
+  when: >
+    ansible_os_family == "Debian"
+    and ( apt_cacher_server | mandatory)
