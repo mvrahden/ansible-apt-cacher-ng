@@ -61,9 +61,7 @@ Author Information
 ------------------
 
 Larry Smith Jr.
-- @mrlesmithjr
-- http://everythingshouldbevirtual.com
-- mrlesmithjr [at] gmail.com
+Menno van Rahden
 
 [Ansible]: <https://www.ansible.com>
 [apt-cacher-ng]: <https://www.unix-ag.uni-kl.de/~bloch/acng/>
