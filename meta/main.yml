@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Menno van Rahden
-  role_name: apt-cacher-ng
+  role_name: apt_cacher_ng
   description: An Ansible role to install/configure apt-cacher-ng on debian-based systems.
   
   license: MIT
