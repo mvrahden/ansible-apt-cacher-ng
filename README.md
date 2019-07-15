@@ -17,7 +17,7 @@ None
 
 ## Example Playbook
 
-```[yaml]
+```yaml
 ---
 - hosts: all
   become: true
